@@ -8,37 +8,37 @@
 			<li class="item">
 				<a href="#/page/6/4">
 					<span class="theme-icon-3 micon micon-group02-04"></span>
-					<span class="csqb-text ng-binding">幼园概况</span>
+					<span class="csqb-text">幼园概况</span>
 				</a>
 			</li>
-            <li class="item ng-scope">
+            <li class="item">
 				<a href="#/news/7/0">
 					<span class="theme-icon-3 micon micon-group02-01"></span>
-					<span class="csqb-text ng-binding">信息快递</span>
+					<span class="csqb-text">信息快递</span>
 				</a>
 			</li>
-            <li class="item ng-scope">
-				<a href="#/elegant/9/3">
+            <li class="item">
+				<a href="#/teachers">
 					<span class="theme-icon-3 micon micon-group02-08"></span>
-					<span class="csqb-text ng-binding">教师风采</span>
+					<span class="csqb-text">教师风采</span>
 				</a>
             </li>
-            <li class="item ng-scope">
+            <li class="item">
 				<a href="#/picture/8/2">
 					<span class="theme-icon-3 micon micon-group02-03"></span>
-					<span class="csqb-text ng-binding">宝宝相册</span>
+					<span class="csqb-text">宝宝相册</span>
 				</a>
             </li>
-            <li class="item ng-scope">
+            <li class="item">
 				<a href="#/news/10/0">
 					<span class="theme-icon-3 micon micon-group02-06"></span>
-					<span class="csqb-text ng-binding">育儿知识</span>
+					<span class="csqb-text">育儿知识</span>
 				</a>
 			</li>
-            <li class="item ng-scope">
+            <li class="item">
 				<a href="#/page/24/4">
 					<span class="theme-icon-3 micon micon-group02-07"></span>
-					<span class="csqb-text ng-binding">联系我们</span>
+					<span class="csqb-text">联系我们</span>
 				</a>
             </li>
 		</ul>
