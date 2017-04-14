@@ -1,55 +1,101 @@
 <template>
   <div class="info-container">
-    <div class="info-item">
-      <div class="info-photo">
+    <div class="news-item">
+      <Row>
+        <Col span="5" offset="1" style="height: 100%">
         <img  src="/static/imgs/photo1.jpg" />
-      </div>
-      <div class="info-post">
-        <h2 class="info-title">童心献爱 温暖老人心</h2>
-        <div class="info-data">09月27日</div>
-        <div class="info-readers">19阅读</div>
-      </div>
+        </Col>
+        <Col span="16" offset="1" type="flex" align-content="space-between">
+        <Row>
+          <h2 style="font-weight: bold">
+            童心献爱 温暖老人心
+          </h2>
+        </Row>
+        <br>
+        <Row>
+            <Col span="19" >
+            09月27日
+          </Col>
+            <Col span=4>
+            29阅读
+          </Col>
+        </Row>
+
+        </Col>
+      </Row>
     </div>
-    <div class="info-item">
-      <div class="info-photo">
+    <div class="news-item">
+      <Row>
+        <Col span="5" offset="1" style="height: 100%">
         <img  src="/static/imgs/photo2.jpg" />
-      </div>
-      <div class="info-post">
-        <h2 class="info-title">童心献爱 温暖老人心</h2>
-        <div class="info-data">09月27日</div>
-        <div class="info-readers">19阅读</div>
-      </div>
+        </Col>
+        <Col span="16" offset="1" type="flex" align-content="space-between">
+        <Row>
+          <h2 style="font-weight: bold">
+            童心献爱 温暖老人心
+          </h2>
+        </Row>
+        <br>
+        <Row>
+          <Col span="19" >
+          09月27日
+        </Col>
+          <Col span=4>
+          29阅读
+        </Col>
+        </Row>
+
+        </Col>
+      </Row>
     </div>
-    <div class="info-item">
-      <div class="info-photo">
-        <img src="/static/imgs/photo3.jpg" />
-      </div>
-      <div class="info-post">
-        <h2 class="info-title">童心献爱 温暖老人心</h2>
-        <div class="info-data">09月27日</div>
-        <div class="info-readers">19阅读</div>
-      </div>
+    <div class="news-item">
+      <Row>
+        <Col span="5" offset="1" style="height: 100%">
+        <img  src="/static/imgs/photo3.jpg" />
+        </Col>
+        <Col span="16" offset="1" type="flex" align-content="space-between">
+        <Row>
+          <h2 style="font-weight: bold">
+            童心献爱 温暖老人心
+          </h2>
+        </Row>
+        <br>
+        <Row>
+          <Col span="19" >
+          09月27日
+        </Col>
+          <Col span=4>
+          29阅读
+        </Col>
+        </Row>
+
+        </Col>
+      </Row>
     </div>
-    <div class="info-item">
-      <div class="info-photo">
-        <img src="/static/imgs/photo4.jpg" />
-      </div>
-      <div class="info-post">
-        <h2 class="info-title">童心献爱 温暖老人心</h2>
-        <div class="info-data">09月27日</div>
-        <div class="info-readers">19阅读</div>
-      </div>
+    <div class="news-item">
+      <Row type="flex">
+        <Col span="5" offset="1">
+        <img  src="/static/imgs/photo4.jpg" />
+        </Col>
+        <Col span="16" offset="1" type="flex" align-content="space-between">
+         <Row>
+           <h2 style="font-weight: bold">
+             童心献爱 温暖老人心
+           </h2>
+          </Row>
+          <br>
+          <Row>
+            <Col span="19" >
+              09月27日
+            </Col>
+            <Col span="4">
+              29阅读
+            </Col>
+          </Row>
+        </Col>
+      </Row>
     </div>
-    <div class="info-item">
-      <div class="info-photo">
-        <img  src="/static/imgs/photo5.jpg" />
-      </div>
-      <div class="info-post">
-        <h2 class="info-title">童心献爱 温暖老人心</h2>
-        <div class="info-data">09月27日</div>
-        <div class="info-readers">19阅读</div>
-      </div>
-    </div>
+
   </div>
 </template>
 <script>
@@ -60,19 +106,22 @@
   }
 </script>
 <style scoped>
-  .info-item{
-    padding:10px 10px 10px 15px;
+  .news-item{
+    padding:10px 0;
+    position: relative;
   }
-  .info-photo{
-    width: 100px;
-    height:100px;
-    float: left;
-    margin-right: 20px;
+  .news-item:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   img{
     width:100%;
   }
-  .info-post{
-    height:100px;
-  }
+
 </style>
