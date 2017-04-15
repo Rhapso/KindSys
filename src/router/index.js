@@ -4,6 +4,10 @@ import Main from '@/components/Main'
 import Home from '@/components/home/Home'
 import Teachers from '@/components/home/Teachers'
 import NewsList from '@/components/home/news/news-list'
+
+import Notices from '@/components/notice/Notices'
+import NoticesDetail from '@/components/notice/NoticesDetail'
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +31,16 @@ export default new Router({
       path: '/teachers',
       name: 'Teachers',
       component: Teachers
+    },
+    {
+      path: '/notices',
+      name: 'Notices',
+      component: Notices
+    },
+    {
+      path: '/notices/detail',
+      name: 'NoticesDetail',
+      component: NoticesDetail
     }
   ]
 })
