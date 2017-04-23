@@ -138,4 +138,6 @@ abbr,acronym{border:0;}
 .pr30{padding-right:30px;}
 .pr50{padding-right:50px;}
 .pr100{padding-right:100px;}
+.gray {color: #999;}
+.ks-container {word-break: break-all;max-width: 640px;padding: 20px;padding-top: 0px;}
 </style>
