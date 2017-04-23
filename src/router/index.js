@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/components/Main'
+
 import Home from '@/components/home/Home'
 import Teachers from '@/components/home/Teachers'
-import NewsList from '@/components/home/news/news-list'
+import NewsList from '@/components/home/News'
 
 import Notices from '@/components/notice/Notices'
 import NoticesDetail from '@/components/notice/NoticesDetail'

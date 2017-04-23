@@ -10,6 +10,7 @@
 export default {
   name: 'noticesDetail',
   data () {
+    return {}
   }
 }
 </script>
