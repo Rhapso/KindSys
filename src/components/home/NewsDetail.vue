@@ -28,12 +28,5 @@
   }
 </script>
 <style scoped>
-.ks-page-content {
-    text-align: justify;
-    word-break: break-all;
-    font-size: 16px;
-    max-width: 640px;
-    padding: 20px;
-    padding-top: 0px;
-}
+    
 </style>
