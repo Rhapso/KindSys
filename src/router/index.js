@@ -4,7 +4,10 @@ import Main from '@/components/Main'
 
 import Home from '@/components/home/Home'
 import Teachers from '@/components/home/Teachers'
-import NewsList from '@/components/home/news/news-list'
+
+import NewsList from '@/components/home/News'
+import NewsDetail from '@/components/home/NewsDetail'
+import Pictures from '@/components/home/Pictures'
 
 import Notices from '@/components/notice/Notices'
 import NoticesDetail from '@/components/notice/NoticesDetail'
@@ -30,14 +33,24 @@ export default new Router({
       component: Home
     },
     {
-      path: '/news/7/0',
+      path: '/news',
       name: 'News',
       component: NewsList
+    },
+    {
+      path: '/news/detail',
+      name: 'NewsDetail',
+      component: NewsDetail
     },
     {
       path: '/teachers',
       name: 'Teachers',
       component: Teachers
+    },
+    {
+      path: '/pictures',
+      name: 'Pictures',
+      component: Pictures
     },
     {
       path: '/notices',

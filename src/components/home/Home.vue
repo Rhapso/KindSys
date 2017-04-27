@@ -6,40 +6,40 @@
 	    </div>
 		<ul class="wgw-menu-list">
 			<li class="item">
-				<a href="#/page/6/4">
+				<router-link to="/page">
 					<span class="theme-icon-3 micon micon-group02-04"></span>
 					<span class="csqb-text">幼园概况</span>
-				</a>
+				</router-link>
 			</li>
             <li class="item">
-				<a href="#/news/7/0">
+				<router-link to="/news">
 					<span class="theme-icon-3 micon micon-group02-01"></span>
 					<span class="csqb-text">信息快递</span>
-				</a>
+				</router-link>
 			</li>
             <li class="item">
-				<a href="#/teachers">
+				<router-link to="/teachers">
 					<span class="theme-icon-3 micon micon-group02-08"></span>
 					<span class="csqb-text">教师风采</span>
-				</a>
+				</router-link>
             </li>
             <li class="item">
-				<a href="#/picture/8/2">
+				<router-link to="/picture">
 					<span class="theme-icon-3 micon micon-group02-03"></span>
 					<span class="csqb-text">宝宝相册</span>
-				</a>
+				</router-link>
             </li>
             <li class="item">
-				<a href="#/news/10/0">
+				<router-link to="/news">
 					<span class="theme-icon-3 micon micon-group02-06"></span>
 					<span class="csqb-text">育儿知识</span>
-				</a>
+				</router-link>
 			</li>
             <li class="item">
-				<a href="#/page/24/4">
+				<router-link to="/page">
 					<span class="theme-icon-3 micon micon-group02-07"></span>
 					<span class="csqb-text">联系我们</span>
-				</a>
+				</router-link>
             </li>
 		</ul>
 	</div>

@@ -1,5 +1,5 @@
 <template>
-  <div id="noticesDetail">
+  <div>
     <Row>
       <kstitle></kstitle>
     </Row>
@@ -13,21 +13,20 @@
     </Row>
   </div>
 </template>
-
 <script>
-import kstitle from '../global/kstitle'
+  import kstitle from '../global/kstitle'
 
-export default {
-  name: 'noticesDetail',
-  components: {
-    kstitle
-  },
-  data () {
-    return {}
+  export default {
+    name: 'NewsDetail',
+    components: {
+      kstitle
+    },
+    data () {
+      return {
+      }
+    }
   }
-}
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    
 </style>

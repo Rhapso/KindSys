@@ -1,6 +1,6 @@
 <template>
   <div class="notices">
-        <panel header="username" :list="list" :type="type"></panel>
+        <panel :list="list" :type="type" :footer="footer"></panel>
   </div>
 </template>
 
@@ -30,8 +30,7 @@ export default {
         }
       ],
       footer: {
-        title: '查看更多',
-        url: 'http://vux.li'
+        title: '没有更多了'
       }
     }
   }

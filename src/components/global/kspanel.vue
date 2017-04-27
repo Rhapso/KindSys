@@ -30,14 +30,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.ks-panel .ks-panel-title {
-    font-size: 14px;
-    font-weight: 700;
-    height: 38px;
-    color: #333;
-}
-.ks-panel .ks-panel-reading p{
-  float: right;
-  padding-right: 5px;
-}
+  
 </style>
