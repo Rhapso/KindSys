@@ -11,6 +11,8 @@ import Pictures from '@/components/home/Pictures'
 
 import Notices from '@/components/notice/Notices'
 import NoticesDetail from '@/components/notice/NoticesDetail'
+import Activities from '@/components/notice/Activities'
+import ActivitiesDetail from '@/components/notice/ActivitiesDetail'
 
 import MyClass from '@/components/myClass/MyClass'
 import ClassMember from '@/components/myClass/ClassMember'
@@ -62,7 +64,16 @@ export default new Router({
       name: 'NoticesDetail',
       component: NoticesDetail
     },
-
+    {
+      path: '/activities',
+      name: 'Activities',
+      component: Activities
+    },
+    {
+      path: '/activities/detail',
+      name: 'ActivitiesDetail',
+      component: ActivitiesDetail
+    },
     {
       path: '/myClass',
       name: 'MyClass',
