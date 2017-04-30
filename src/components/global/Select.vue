@@ -1,9 +1,9 @@
 <template>
 <div v-clickoutside="handleClose">
   <div @click="toggleMenu">
-    <span v-show="showPlaceholder">{{ localePlaceholder }}</span>
+    <span v-show="showPlaceholder" style="color:green">{{ localePlaceholder }}</span>
     <span v-show="!showPlaceholder">{{ selectedSingle }}</span>
-    <Icon type="chevron-down"></Icon>
+    <Icon type="chevron-down" color="green"></Icon>
   </div>
   <transition name="slide-up">
     <Dropdown v-show="visible" ref="dropdown">
@@ -147,5 +147,4 @@ export default {
 }
 </script>
 <style scoped>
-  
 </style>

@@ -11,6 +11,11 @@ import Pictures from '@/components/home/Pictures'
 import Notices from '@/components/notice/Notices'
 import NoticesDetail from '@/components/notice/NoticesDetail'
 
+import Attendance from '@/components/attendance/Attendance'
+import AttendanceDetail from '@/components/attendance/AttendanceDetail'
+import AttendanceDate from '@/components/attendance/AttendanceDate'
+import AttendanceRecord from '@/components/attendance/AttendanceRecord'
+
 Vue.use(Router)
 
 export default new Router({
@@ -54,6 +59,26 @@ export default new Router({
       path: '/notices/detail',
       name: 'NoticesDetail',
       component: NoticesDetail
+    },
+    {
+      path: '/attendance',
+      name: 'Attendance',
+      component: Attendance
+    },
+    {
+      path: '/attendance/detail',
+      name: 'AttendanceDetail',
+      component: AttendanceDetail
+    },
+    {
+      path: '/attendance/date',
+      name: 'AttendanceDate',
+      component: AttendanceDate
+    },
+    {
+      path: '/attendance/record',
+      name: 'AttendanceRecord',
+      component: AttendanceRecord
     }
   ]
 })
