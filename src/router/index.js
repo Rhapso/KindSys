@@ -4,12 +4,21 @@ import Main from '@/components/Main'
 
 import Home from '@/components/home/Home'
 import Teachers from '@/components/home/Teachers'
+
 import NewsList from '@/components/home/News'
 import NewsDetail from '@/components/home/NewsDetail'
 import Pictures from '@/components/home/Pictures'
 
 import Notices from '@/components/notice/Notices'
 import NoticesDetail from '@/components/notice/NoticesDetail'
+import Activities from '@/components/notice/Activities'
+import ActivitiesDetail from '@/components/notice/ActivitiesDetail'
+
+import MyClass from '@/components/myClass/MyClass'
+import ClassMember from '@/components/myClass/ClassMember'
+import ClassInfo from '@/components/myClass/ClassInfo'
+import Teacher from '@/components/global/Teacher'
+import Parent from '@/components/global/Parent'
 
 import Attendance from '@/components/attendance/Attendance'
 import AttendanceDetail from '@/components/attendance/AttendanceDetail'
@@ -79,6 +88,41 @@ export default new Router({
       path: '/attendance/record',
       name: 'AttendanceRecord',
       component: AttendanceRecord
+    },
+    {
+      path: '/activities',
+      name: 'Activities',
+      component: Activities
+    },
+    {
+      path: '/activities/detail',
+      name: 'ActivitiesDetail',
+      component: ActivitiesDetail
+    },
+    {
+      path: '/myClass',
+      name: 'MyClass',
+      component: MyClass
+    },
+    {
+      path: '/myClass/classMember',
+      name: 'ClassMember',
+      component: ClassMember
+    },
+    {
+      path: '/myClass/classInfo',
+      name: 'ClassInfo',
+      component: ClassInfo
+    },
+    {
+      path: '/teacher',
+      name: 'Teacher',
+      component: Teacher
+    },
+    {
+      path: '/parent',
+      name: 'Parent',
+      component: Parent
     }
   ]
 })
