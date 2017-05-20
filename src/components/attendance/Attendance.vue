@@ -2,9 +2,7 @@
 	<div class="attendance">
 		<Row type="flex" align="middle" style="height:40px">
     	    <Col span="6" offset="8">
-    	    	<ks-select>
-    	    			<ks-option v-for="item in stuList" :value="item.value" :key="item">{{ item.label }}</ks-option>
-				</ks-select>
+    	    	<ks-select :items = "stuList"></ks-select>
         	</Col>
         	<Col span="6" offset="4">
         		<div>
@@ -25,14 +23,12 @@
     </div>	
 </template>
 <script>
-  import ksOption from '../global/Option'
   import ksSelect from '../global/Select'
   import { Panel } from 'vux'
   export default {
     name: 'Attendance',
     components: {
       ksSelect,
-      ksOption,
       Panel
     },
     data () {
@@ -40,11 +36,28 @@
         stuList: [
           {
             value: '0',
-            label: '周道'
+            name: '周一',
+            className: '小小班（1）班'
           },
           {
             value: '1',
-            label: '小道'
+            name: '周二',
+            className: '小班（2）班'
+          },
+          {
+            value: '2',
+            name: '周三',
+            className: '小班（2）班'
+          },
+          {
+            value: '3',
+            name: '周四',
+            className: '小班（2）班'
+          },
+          {
+            value: '4',
+            name: '周五',
+            className: '小班（2）班'
           }
         ],
         type: '1',

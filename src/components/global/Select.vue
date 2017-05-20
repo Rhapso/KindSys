@@ -1,150 +1,123 @@
 <template>
 <div v-clickoutside="handleClose">
-  <div @click="toggleMenu">
-    <span v-show="showPlaceholder" style="color:green">{{ localePlaceholder }}</span>
-    <span v-show="!showPlaceholder">{{ selectedSingle }}</span>
-    <Icon type="chevron-down" color="green"></Icon>
+  <div @click="toggleMenu" style="color:green">
+    <span v-show="showPlaceHolder">{{ localePlaceHolder }}</span>
+    <span v-show="!showPlaceHolder">{{ selectedStu }}</span>
+    <Icon v-show="!visible" type="chevron-down" color="green"></Icon>
+    <Icon v-show="visible" type="chevron-up" color="green"></Icon>
   </div>
-  <transition name="slide-up">
-    <Dropdown v-show="visible" ref="dropdown">
-      <ul ref="options"><slot></slot></ul>
-    </Dropdown>
-  </transition>  
+  <transition name="slide-up"> 
+    <div class="poptip" v-show="visible">
+      <span class="bot"></span>
+      <span class="top"></span>
+        <ul @click="select">
+        	<li v-for="item in items">{{ item.name }}</li>
+        </ul>
+    </div>
+  </transition> 
 </div>
 </template>
 
 <script>
-import Emitter from '../../mixins/emitter'
 import clickoutside from '../../directives/clickoutside'
-
 export default {
-  name: 'ksSelect',
-  mixins: [ Emitter ],
+  name: 'ksSelect2',
   directives: { clickoutside },
   props: {
-    value: {
-      type: [String, Number, Array],
-      default: ''
-    },
-    title: String
+    items: {
+      type: [ Object, Array ]
+    }
   },
   data () {
     return {
+      isSelect: false,
       visible: false,
-      focusIndex: 0,
-      options: [],
-      selectedSingle: '',
-      palceholder: '',
-      model: this.value
+      showPlaceHolder: true
     }
   },
   computed: {
-    showPlaceholder () {
-      let status = false
-      if (this.selectedSingle === '') {
-        status = true
-      }
-      return status
-    },
-    localePlaceholder () {
-      return this.palceholder
+    localePlaceHolder () {
+      return this.items[0].name
     }
   },
   methods: {
+    fontColorChange () {
+      var list = document.getElementsByTagName('li')
+      console.log(list)
+      for (var i = list.length - 1; i >= 0; i--) {
+        list[i].style.color = '#999'
+        if (list[i].innerHTML === this.selectedStu || (list[i].innerHTML === this.localePlaceHolder && this.showPlaceHolder === true)) {
+          list[i].style.color = 'green'
+        }
+      }
+    },
     toggleMenu () {
       this.visible = !this.visible
+      this.fontColorChange()
     },
     hideMenu () {
       this.visible = false
-      this.focusIndex = 0
-      this.broadcast('ksOption', 'on-select-close')
     },
     handleClose () {
       this.hideMenu()
     },
-    findChild (cb) {
-      const find = function (child) {
-        const name = child.$options.componentName
-
-        if (name) {
-          cb(child)
-        } else if (child.$children.length) {
-          child.$children.forEach((innerChild) => {
-            find(innerChild, cb)
-          })
-        }
-      }
-      this.$children.forEach((child) => {
-        find(child)
-      })
-    },
-    updateOptions (init, slot = false) {
-      let options = []
-
-      this.findChild((child) => {
-        options.push({
-          value: child.value,
-          label: (child.label === undefined) ? child.$el.innerHTML : child.label
-        })
-      })
-
-      this.options = options
-      this.palceholder = this.options[0].label
-      if (init) {
-        this.updateSingleSelected(true, slot)
-      }
-    },
-    updateSingleSelected (init = false, slot = false) {
-      const type = typeof this.model
-
-      if (type === 'string' || type === 'number') {
-        let findModel = false
-
-        for (let i = 0; i < this.options.length; i++) {
-          if (this.model === this.options[i].value) {
-            this.selectedSingle = this.options[i].label
-            findModel = true
-            break
-          }
-        }
-
-        if (slot && !findModel) {
-          this.model = ''
-        }
-      }
-
-      this.toggleSingleSelected(this.model, init)
-    },
-    toggleSingleSelected (value, init = false) {
-      this.findChild((child) => {
-        if (child.value === value) {
-          child.selected = true
-        } else {
-          child.selected = false
-        }
-      })
-
+    select (event) {
+      this.showPlaceHolder = false
+      this.selectedStu = event.target.innerHTML
+      this.fontColorChange()
       this.hideMenu()
-    }
-  },
-  mounted () {
-    this.updateOptions(true)
-
-    this.$on('on-select-selected', (value) => {
-      if (this.model === value) {
-        this.hideMenu()
-      } else {
-        this.model = value
-        console.log(this.model)
-      }
-    })
-  },
-  watch: {
-    model () {
-      this.updateSingleSelected()
     }
   }
 }
 </script>
 <style scoped>
+  .poptip{
+    width:250px; 
+    margin-top: 6px;
+    padding: 0 10px;
+    border:2px solid #F5F5F5;
+    background-color: #F5FFFA;
+    position:absolute; 
+    z-index: 1000;
+    text-align: center;
+    font-size: 18px;
+    left:-50px;
+  }
+
+  .poptip span{
+    width:0; 
+    height:0; 
+    font-size:0; 
+    overflow:hidden; 
+    position:absolute;
+    z-index: 2000;
+  }
+  .poptip span.bot{
+    border-width:10px; 
+    border-style:solid; 
+    border-color:transparent transparent #F5F5F5; 
+    left:62px; 
+    top: -20px;
+  }
+  .poptip span.top{
+    border-width:10px; 
+    border-style:solid; 
+    border-color:transparent transparent #F5FFFA; 
+    left:62px; 
+    top:-18px;
+  }
+  li {
+  	padding: 5px;
+  	border-bottom: 1px solid #F5F5F5;
+  } 
+  .active {
+  	color: green 
+  }
+  li:last-child {  
+   border-bottom: none;  
+	}   
+	li::after {
+		content: "小小班";
+		font-size: 12px;
+	}
 </style>
