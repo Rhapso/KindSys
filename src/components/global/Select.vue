@@ -21,7 +21,7 @@
 <script>
 import clickoutside from '../../directives/clickoutside'
 export default {
-  name: 'ksSelect2',
+  name: 'ksSelect',
   directives: { clickoutside },
   props: {
     items: {
@@ -32,6 +32,7 @@ export default {
     return {
       isSelect: false,
       visible: false,
+      selectedStu: '',
       showPlaceHolder: true
     }
   },
@@ -43,7 +44,6 @@ export default {
   methods: {
     fontColorChange () {
       var list = document.getElementsByTagName('li')
-      console.log(list)
       for (var i = list.length - 1; i >= 0; i--) {
         list[i].style.color = '#999'
         if (list[i].innerHTML === this.selectedStu || (list[i].innerHTML === this.localePlaceHolder && this.showPlaceHolder === true)) {
