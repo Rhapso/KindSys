@@ -3,9 +3,7 @@
     <Card :bordered="false" :padding="14">
         <Row type="flex" align="middle" slot="title">
           <Col span="6" offset="8">
-            <ks-select>
-              <ks-option v-for="item in stuList" :value="item.value" :key="item">{{ item.label }}</ks-option>
-            </ks-select>
+            <ks-select :items = "stuList"></ks-select>
           </Col>
           <Col span="6" offset="4">
             <Icon type="ios-star" color="green"></Icon>
@@ -19,14 +17,12 @@
 	</div>
 </template>
 <script>
-  import ksOption from '../global/Option'
   import ksSelect from '../global/Select'
   import ksDatePicker from '../global/DatePicker'
   export default {
     name: 'AttendanceRecord',
     components: {
       ksSelect,
-      ksOption,
       ksDatePicker
     },
     data () {
