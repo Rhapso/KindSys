@@ -1,15 +1,27 @@
 <template>
-  <div class="parent">
-    <div class="wraper">
-      <div> <img class="icon" v-bind:src="url" /> </div>
-      <Card> <p style="width:50%; display:inline;"> 身份: </p> <p style="width:50%; float:right; text-align:right;"> {{ name }}家长 </p> </Card>
+    <div class="parent">
+      <div class="wrapper">
+        <div class="img_wrapper"> <img class="icon" v-bind:src="url" /> </div>
+        <group>
+          <cell title="身份" value="李颖老师"></cell>
+        </group>
+        <br/>
+        <x-button type="primary">打电话</x-button>
+        <br/>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
+  import { Cell, Group, XButton } from 'vux'
+
   export default {
     name: 'parent',
+    components: {
+      Cell,
+      Group,
+      XButton
+    },
     data () {
       return {
         url: '/static/imgs/icon2.jpg',
@@ -20,7 +32,9 @@
 </script>
 
 <style scoped>
-div.parent { margin-top: 30px; width:400px; position:absolute; left:50%; }
-.parent div.wraper { width: 400px; position:absolute; left:-50%; }
-.parent .wraper img.icon { width:100px; height:100px; margin-left:150px; }
+.parent { margin-top: 30px; height: 100%; background: #fafafa;}
+.wrapper { background: white; padding-left:10px; padding-right:10px;}
+.img_wrapper {margin-left:50%;}
+.img_wrapper img.icon { width:100px; height:200px; position:relative; right: 50px;}
+.parent .wrapper img.icon { width:100px; height:100px; }
 </style>

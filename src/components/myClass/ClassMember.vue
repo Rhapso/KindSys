@@ -1,30 +1,33 @@
 <template>
   <div class="classMember">
-
-    <Row :gutter="16">
-      <Col span="6" class="col" v-for="member in memberList" :key="member.id">
-        <div class="member">
-          <a v-bind:href="member.ref">
-          <div> <img class="icon" v-bind:src="member.url" /> </div>
-          </a>
-          <p class="name"> {{ member.name }} </p>
-        </div>
-      </Col>
-    </Row>
-
-    <a href="#/myClass/classInfo"> <Button class="info">
-      <div>
-        <h1> {{ classType }} ({{ classNum }}) 班 </h1>
-        <p> 代码: {{code}} </p>
-      </div>
-    </Button> </a>
+    <div class="memberContainer">
+      <Row>
+        <Col span="6" class="col" v-for="member in memberList" :key="member.id">
+          <div class="member">
+            <a v-bind:href="member.ref">
+            <div> <img class="icon" v-bind:src="member.url" /> </div>
+            </a>
+            <p class="name"> {{ member.name }} </p>
+          </div>
+        </Col>
+      </Row>
+    </div>
+    <group>
+      <cell title="小小班（1）" link="/myClass/classInfo" :inline-desc='code'></cell>
+    </group>
     <Button class="quit">退出班级</Button>
   </div>
 </template>
 
 <script>
+  import { Cell, Group } from 'vux'
+
   export default {
     name: 'classMember',
+    components: {
+      Cell,
+      Group
+    },
     data () {
       return {
         classType: 'small',
@@ -34,27 +37,27 @@
           {
             ref: '#/Teacher',
             url: '/static/imgs/icon1.jpg',
-            name: 'teacher_foo'
+            name: 'teaoo'
           },
           {
             ref: '#/Parent',
             url: '/static/imgs/icon2.jpg',
-            name: 'parent_bar'
+            name: 'par'
           },
           {
             ref: '#/Teacher',
             url: '/static/imgs/icon1.jpg',
-            name: 'teacher_boo'
+            name: 'teacho'
           },
           {
             ref: '#/Parent',
             url: '/static/imgs/icon2.jpg',
-            name: 'parent_far'
+            name: 'pat_far'
           },
           {
             ref: '#/Teacher',
             url: '/static/imgs/icon1.jpg',
-            name: 'teacher_foobar'
+            name: 'troobar'
           }
         ]
       }
@@ -64,11 +67,10 @@
 
 <style scoped>
 Col.col { margin:0; padding:0; }
-Button.info { width:100%; margin-top:60px; text-align:center; }
-.info div { padding:10px; }
-Button.quit { width:100%; font-size:20px; padding:10px; margin-top:30px; }
-
+Button.quit { width:100%; font-size:20px; padding:10px; margin-top:30px; background-color:white}
 .member { width:100%; height:100%; margin-top:20px; margin-bottom:0; }
 .member img.icon { width:80%; height:80%; margin-left:10%; margin-right:10%; }
 .member p.name { width:100%; text-align:center; margin-top:0; font-size:20px; }
+.classMember {height: 100%; background: #fafafa; }
+.memberContainer {background: white; width: 100%; padding-left: 5%; padding-right:5%;}
 </style>

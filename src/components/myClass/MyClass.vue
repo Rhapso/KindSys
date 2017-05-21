@@ -1,8 +1,8 @@
+<!--todo rewrite css, tooooooooo terrible!!!-->
 <template>
   <div class="myClass">
     <h1> 我的班级 </h1>
     <a href="#/myClass/classMember">
-      <div class='wraper'>
         <Card id='title'>
           <img class="pic" src="/static/imgs/icon1.jpg" />
           <div class="text">
@@ -10,7 +10,6 @@
             <p> {{ teacher }} &nbsp &nbsp &nbsp 老师: {{ teacherNum }} </p>
           </div>
         </Card>
-      </div>
     </a>
   </div>
 </template>
@@ -22,7 +21,7 @@
       return {
         classType: 'small',
         classNum: 1,
-        teacher: 'xiaoming',
+        teacher: '小明',
         teacherNum: 666
       }
     }
@@ -31,31 +30,9 @@
 
 <style scoped>
 .myClass { margin-top:10px; }
-.myClass h1 { width:100%; text-align:center; margin-bottom:10px; }
-.myClass .wraper #title h1 { width:100%; text-align:center; }
-.myClass .wraper #title p { width:100%; text-align:center; }
-.myClass a { width:200px; }
-.myClass div.wraper { 
-  width:600px;
-  position:absolute;
-  left:50%;
-}
-.myClass .wraper #title {
-  background:#00ff66;
-  width:600px;
-  position:absolute;
-  left:-50%;
-  margin:0;
-  padding-bottom:16px;
-}
-#title img.pic {
-  float:left;
-  width:100px;
-  height:100px;
-  border-radius:100px;
-}
-#title div.text {
-  position:relative;
-  top:12px;
-}
+.myClass>h1 { width:100%; text-align:center; margin-bottom:10px; }
+.myClass #title .pic {width:50px; height:50px; float:left;border-radius: 50px;}
+.myClass #title .text {color: black; margin-left: 70px; position:relative; bottom:7px;}
+.myClass #title .text p {color: darkgray;}
+.myClass #title .text h1 {font-size: 26px;}
 </style>

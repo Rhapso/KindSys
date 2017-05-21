@@ -1,18 +1,28 @@
 <template>
-  <div class="teacher">
-    <div class="wraper">
-      <div> <img class="icon" v-bind:src="url" /> </div>
-      <Card> <p style="width:50%; display:inline;"> 身份: </p> <p style="width:50%; float:right; text-align:right;"> {{ name }}老师 </p> </Card>
-      <Card> <p style="width:50%; display:inline;"> 任教科目: </p> <p  style="width:50%; float:right; text-align:right;"> {{ subject }} </p> </Card>
-      <div class="button"> <Button style="background:#3399ff;">leave message</Button> </div>
-      <div class="button"> <Button style="background:#00cc66;">phone call</Button> </div>
+    <div class="parent">
+      <div class="wrapper">
+        <div class="img_wrapper"> <img class="icon" v-bind:src="url" /> </div>
+        <group>
+          <cell title="身份" value="李颖家长"></cell>
+          <cell title="任教科目" value="数学"></cell>
+        </group>
+        <br/>
+        <x-button type="primary">打电话</x-button>
+        <br/>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
+  import { Cell, Group, XButton } from 'vux'
+
   export default {
     name: 'teacher',
+    components: {
+      Cell,
+      Group,
+      XButton
+    },
     data () {
       return {
         url: '/static/imgs/icon1.jpg',
