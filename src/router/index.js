@@ -21,6 +21,7 @@ import Teacher from '@/components/global/Teacher'
 import Parent from '@/components/global/Parent'
 
 import Attendance from '@/components/attendance/Attendance'
+import Attendance1 from '@/components/attendance/Attendance.1'
 import AttendanceDetail from '@/components/attendance/AttendanceDetail'
 import AttendanceDate from '@/components/attendance/AttendanceDate'
 import AttendanceRecord from '@/components/attendance/AttendanceRecord'
@@ -73,6 +74,11 @@ export default new Router({
       path: '/attendance',
       name: 'Attendance',
       component: Attendance
+    },
+    { // just for demo
+      path: '/attendance/1',
+      name: 'Attendance1',
+      component: Attendance1
     },
     {
       path: '/attendance/detail',

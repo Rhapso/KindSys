@@ -1,33 +1,40 @@
 <template>
   <div class="attendance">
     <Row type="flex" align="middle" style="height:40px">
-      <Col span="6" offset="8">
+      <Col span="8" offset="8">
       <ks-select :items = "stuList"></ks-select>
       </Col>
-      <Col span="6" offset="4">
-        <div>
-          <router-link to="/attendance/detail">
-            <Row type="flex" justify="center" align="middle">
-              <Col>
-                <x-icon type="ios-plus-outline" class="cell-x-icon" size="24"></x-icon>
-              </Col>
-              <Col>
-                <span style="color:green;line-height:29px">请假</span>
-              </Col>
-            </Row>
-          </router-link>
-        </div>
-      </Col>		
     </Row>
-    <panel :list="list" :type="type" :footer="footer" style="margin:0"></panel>
+    <hr color=#eee></hr>
+    <group title="2017年4月">
+      <cell title="14 周二">
+        <div slot="value">
+          <span style="color: green">黄清昊</span>
+        </div>
+      </cell>
+      <cell title="14 周二">
+        <div slot="value">
+          <span style="color: green">黄清昊</span>
+        </div>
+      </cell>
+    </group>
+    <group title="2017年1月">
+      <cell title="14 周二">
+        <div slot="value">
+          <span style="color: green">黄清昊</span>
+        </div>
+      </cell>
+    </group>
   </div>	
 </template>
 <script>
   import ksSelect from '../global/Select'
-  import { Panel } from 'vux'
+  import { Panel, Group, Cell } from 'vux'
   export default {
     name: 'Attendance',
     components: {
+      Group,
+      Cell,
       ksSelect,
       Panel
     },
@@ -63,13 +70,13 @@
         type: '1',
         list: [
           {
-            title: '4月20日 周四 全天',
-            desc: '请假理由：肚子疼',
+            title: '消息1',
+            desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
             url: '/notices/detail'
           },
           {
-            title: '4月20日 周四 全天',
-            desc: '请假理由：肚子疼',
+            title: '消息2',
+            desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
             url: '/notices/detail'
           }
         ],
