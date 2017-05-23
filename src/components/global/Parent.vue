@@ -35,6 +35,6 @@
 .parent { margin-top: 30px; height: 100%; background: #fafafa;}
 .wrapper { background: white; padding-left:10px; padding-right:10px;}
 .img_wrapper {margin-left:50%;}
-.img_wrapper img.icon { width:100px; height:200px; position:relative; right: 50px;}
+.img_wrapper img.icon { width:100px; height:100px; position:relative; right: 50px;}
 .parent .wrapper img.icon { width:100px; height:100px; }
 </style>

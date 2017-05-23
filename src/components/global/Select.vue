@@ -2,7 +2,7 @@
 <div v-clickoutside="handleClose">
   <div @click="toggleMenu" style="color:green">
     <span v-show="showPlaceHolder">{{ localePlaceHolder }}</span>
-    <span v-show="!showPlaceHolder">{{ selectedStu }}</span>
+    <span v-show="!showPlaceHolder">{{ selectedItem }}</span>
     <Icon v-show="!visible" type="chevron-down" color="green"></Icon>
     <Icon v-show="visible" type="chevron-up" color="green"></Icon>
   </div>
@@ -32,7 +32,7 @@ export default {
     return {
       isSelect: false,
       visible: false,
-      selectedStu: '',
+      selectedItem: '',
       showPlaceHolder: true
     }
   },
@@ -46,7 +46,7 @@ export default {
       var list = document.getElementsByTagName('li')
       for (var i = list.length - 1; i >= 0; i--) {
         list[i].style.color = '#999'
-        if (list[i].innerHTML === this.selectedStu || (list[i].innerHTML === this.localePlaceHolder && this.showPlaceHolder === true)) {
+        if (list[i].innerHTML === this.selectedItem || (list[i].innerHTML === this.localePlaceHolder && this.showPlaceHolder === true)) {
           list[i].style.color = 'green'
         }
       }
@@ -63,7 +63,7 @@ export default {
     },
     select (event) {
       this.showPlaceHolder = false
-      this.selectedStu = event.target.innerHTML
+      this.selectedItem = event.target.innerHTML
       this.fontColorChange()
       this.hideMenu()
     }

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import kstitle from '../global/kstitle'
+import kstitle from '../global/Title'
 
 export default {
   name: 'noticesDetail',

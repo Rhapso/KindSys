@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-  import kspanel from '../global/kspanel'
+  import kspanel from '../global/Panel'
 
   export default {
     name: 'Activities',

@@ -1,5 +1,5 @@
 <template>
-    <div class="parent">
+    <div class="teacher">
       <div class="wrapper">
         <div class="img_wrapper"> <img class="icon" v-bind:src="url" /> </div>
         <group>
@@ -34,8 +34,9 @@
 </script>
 
 <style scoped>
-div.teacher { margin-top: 30px; width:400px; position:absolute; left:50%; }
-div.wraper { width: 400px; position:absolute; left:-50%; }
-img.icon { width:100px; height:100px; margin-left:150px; }
-.button Button { width:300px; margin-left:50px; margin-top:20px; font-size:20px; }
+.teacher { margin-top: 30px; height: 100%; background: #fafafa;}
+.wrapper { background: white; padding-left:10px; padding-right:10px;}
+.img_wrapper {margin-left:50%;}
+.img_wrapper img.icon { width:100px; height:100px; position:relative; right: 50px;}
+.parent .wrapper img.icon { width:100px; height:100px; }
 </style>

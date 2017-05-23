@@ -21,7 +21,7 @@
   </div>
 </template>
 <script>
-  import kstitle from '../global/kstitle'
+  import kstitle from '../global/Title'
   import { Checklist, XButton } from 'vux'
 
   export default {

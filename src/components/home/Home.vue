@@ -24,7 +24,7 @@
 				</router-link>
             </li>
             <li class="item">
-				<router-link to="/picture">
+				<router-link to="/pictures">
 					<span class="theme-icon-3 micon micon-group02-03"></span>
 					<span class="csqb-text">宝宝相册</span>
 				</router-link>

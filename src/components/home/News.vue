@@ -5,7 +5,7 @@
 </template>
 <script>
   import { Panel, Group, Radio } from 'vux'
-  import kspanel from '../global/kspanel'
+  import kspanel from '../global/Panel'
 
   export default {
     name: 'News',
