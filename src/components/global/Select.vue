@@ -1,10 +1,10 @@
 <template>
 <div v-clickoutside="handleClose">
-  <div @click="toggleMenu" style="color:green">
+  <div @click="toggleMenu" class="green" style="font-size: 24px;">
     <span v-show="showPlaceHolder">{{ localePlaceHolder }}</span>
     <span v-show="!showPlaceHolder">{{ selectedItem }}</span>
-    <Icon v-show="!visible" type="chevron-down" color="green"></Icon>
-    <Icon v-show="visible" type="chevron-up" color="green"></Icon>
+    <Icon v-show="!visible" type="chevron-down" class="green"></Icon>
+    <Icon v-show="visible" type="chevron-up" class="green"></Icon>
   </div>
   <transition name="slide-up"> 
     <div class="poptip" v-show="visible">

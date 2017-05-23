@@ -1,6 +1,6 @@
 <template>
   <div class="attendance">
-    <Row type="flex" align="middle" style="height:40px">
+    <Row type="flex" align="middle" style="height:50px">
       <Col span="6" offset="8">
       <ks-select :items = "stuList"></ks-select>
       </Col>

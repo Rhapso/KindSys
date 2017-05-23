@@ -1,6 +1,6 @@
 <template>
   <div class="attendance">
-    <Row type="flex" align="middle" style="height:40px">
+    <Row type="flex" align="middle" style="height:50px">
       <Col span="8" offset="8">
       <ks-select :items = "stuList"></ks-select>
       </Col>
@@ -9,19 +9,19 @@
     <group title="2017年4月">
       <cell title="14 周二">
         <div slot="value">
-          <span style="color: green">黄清昊</span>
+          <span class="green">黄清昊</span>
         </div>
       </cell>
       <cell title="14 周二">
         <div slot="value">
-          <span style="color: green">黄清昊</span>
+          <span class="green">黄清昊</span>
         </div>
       </cell>
     </group>
     <group title="2017年1月">
       <cell title="14 周二">
         <div slot="value">
-          <span style="color: green">黄清昊</span>
+          <span class="green">黄清昊</span>
         </div>
       </cell>
     </group>
