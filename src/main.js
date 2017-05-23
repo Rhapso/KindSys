@@ -3,8 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import iView from 'iview'
+import * as vux from 'vux'
+import 'iview/dist/styles/iview.css'    // 使用 CSS
+
+// global components
 
 Vue.config.productionTip = false
+Vue.use(iView)
+Vue.use(vux)
 
 /* eslint-disable no-new */
 new Vue({
