@@ -1,6 +1,6 @@
 <template>
   <div id="kspanel" class="ks-title">
-			<p class="title">配套幼儿园为住宅小区“标配”</p>
+			<p class="title">Noticessssssssssss</p>
 	    <div class="gray"><p>校办供稿 &nbsp; &nbsp;2016-10-18 19:25</p></div>
   </div>
 </template>

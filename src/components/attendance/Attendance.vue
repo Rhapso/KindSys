@@ -65,12 +65,12 @@
           {
             title: '4月20日 周四 全天',
             desc: '请假理由：肚子疼',
-            url: '/notices/detail'
+            url: '/attendance/detail'
           },
           {
             title: '4月20日 周四 全天',
             desc: '请假理由：肚子疼',
-            url: '/notices/detail'
+            url: '/attendance/detail'
           }
         ],
         footer: {
