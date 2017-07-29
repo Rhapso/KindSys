@@ -6,7 +6,7 @@
 	    </div>
 		<ul class="wgw-menu-list">
 			<li class="item">
-				<router-link to="/page">
+				<router-link to="/info">
 					<span class="theme-icon-3 micon micon-group02-04"></span>
 					<span class="csqb-text">幼园概况</span>
 				</router-link>
@@ -45,13 +45,13 @@
 	</div>
     <div>
         <Card>
-            <p slot="title">标题</p>
+            <p slot="title">最新动态</p>
             <Row>
                 <Col span="6">
                     <img style="width:100%;" src="http://file.baojy.cn/group1/M00/00/03/rBAfY1fp3j-EOLaWAAAAAE8jQ9o909.png">
                 </Col>
                 <Col span="16">
-                    <p>无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边.</p>
+                    <p>xxx幼儿园是一所教育部直属的普通全日制幼儿园。</p>
                 </Col>
             </Row>
         </Card>

@@ -19,6 +19,8 @@ import ClassMember from '@/components/myClass/ClassMember'
 import ClassInfo from '@/components/myClass/ClassInfo'
 import Teacher from '@/components/global/Teacher'
 import Parent from '@/components/global/Parent'
+import Page from '@/components/global/Page'
+import Info from '@/components/global/Info'
 
 import Attendance from '@/components/attendance/Attendance'
 import Attendance1 from '@/components/attendance/Attendance.1'
@@ -74,6 +76,16 @@ export default new Router({
       path: '/attendance',
       name: 'Attendance',
       component: Attendance
+    },
+    {
+      path: '/page',
+      name: 'Page',
+      component: Page
+    },
+    {
+      path: '/info',
+      name: 'Info',
+      component: Info
     },
     { // just for demo
       path: '/attendance/1',
